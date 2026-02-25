@@ -8,13 +8,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 dotenv.config({ path: join(__dirname, '..', '.env') });
+dotenv.config(); // Also check current directory and Railway env vars
 
 const app = express();
 app.use(express.json());
 
 // ======================== CONFIG ========================
 
-const MODEL = 'gpt-4-turbo-preview';
+const MODEL = 'gpt-4o-mini';
 const MAX_TOKENS = 500;
 const TEMPERATURE = 0.7;
 
@@ -151,8 +152,8 @@ app.post('/api/chat', async (req, res) => {
     const reply = completion.choices[0].message.content;
     return res.json({ reply });
   } catch (err) {
-    console.error('OpenAI API error:', err.message);
-    return res.status(500).json({ error: 'Failed to get AI response. Please try again.', type: 'api_error' });
+    console.error('OpenAI API error:', err.message, err.status, err.code);
+    return res.status(500).json({ error: `AI service error: ${err.message}`, type: 'api_error' });
   }
 });
 

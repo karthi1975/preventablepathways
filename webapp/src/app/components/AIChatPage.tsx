@@ -64,7 +64,7 @@ export function AIChatPage() {
       if (data.error && data.type === "moderation") {
         aiContent = `⚠️ ${data.error}`;
       } else if (data.error) {
-        aiContent = "Sorry, something went wrong. Please try again.";
+        aiContent = `Sorry, something went wrong: ${data.error}`;
       } else {
         aiContent = data.reply;
       }
