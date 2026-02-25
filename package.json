@@ -1,0 +1,15 @@
+{
+  "name": "preventable-pathways-root",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "install": "cd webapp && npm install",
+    "build": "cd webapp && npm run build",
+    "start": "cd webapp && node server.js",
+    "test": "cd webapp && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
