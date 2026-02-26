@@ -53,7 +53,7 @@ describe('API Endpoints', () => {
 
       expect(res.body.error).toBeDefined();
       expect(res.body.type).toBe('moderation');
-      expect(res.body.error).toContain('health education');
+      expect(res.body.error).toContain('prohibited');
     });
 
     it('should accept clean messages and return a reply', async () => {

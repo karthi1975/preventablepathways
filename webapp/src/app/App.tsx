@@ -48,12 +48,6 @@ export default function App() {
                 </div>
               </div>
               <div className="flex flex-col items-center gap-2 text-sm text-gray-600 md:items-end">
-                <a
-                  href="mailto:info@preventablepathways.org"
-                  className="hover:text-[#00ACC1]"
-                >
-                  info@preventablepathways.org
-                </a>
                 <div className="flex gap-3">
                   <a href="#privacy" className="hover:text-[#00ACC1]">
                     Privacy Policy

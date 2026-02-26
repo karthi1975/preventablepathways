@@ -83,12 +83,6 @@ export function Sidebar({ currentPage, onNavigate }: SidebarProps) {
           {!isCollapsed && (
             <div className="border-t border-gray-200 p-4">
               <div className="space-y-2 text-xs text-gray-600">
-                <a
-                  href="mailto:info@preventablepathways.org"
-                  className="block hover:text-[#00ACC1]"
-                >
-                  info@preventablepathways.org
-                </a>
                 <div className="flex gap-2">
                   <a href="#privacy" className="hover:text-[#00ACC1]">
                     Privacy Policy
